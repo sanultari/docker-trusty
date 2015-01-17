@@ -4,7 +4,7 @@ VARIANT=buildd
 CROOT=trusty
 TARBALL=$PWD/${CROOT}.tar.gz
 
-sudo debootstrap --verbose --variant=$VARIANT --components='main,universe' --include='iproute,iputils-ping,curl,wget' --arch=amd64 trusty $CROOT/ `curl -s http://mirrors.ubuntu.com/mirrors.txt | head -1`
+sudo debootstrap --verbose --variant=$VARIANT --components='main,universe' --include='iproute,iputils-ping,curl,wget,ca-certificates' --arch=amd64 trusty $CROOT/ `curl -s http://mirrors.ubuntu.com/mirrors.txt | head -1`
 
 cd $CROOT
 
